@@ -1,0 +1,30 @@
+{
+    "name": "seofeb/module-faq",
+    "description": "Magento2 FAQ Module",
+    "require": {
+        "prince/module-base": "^1.0"
+    },
+    "type": "magento2-module",
+    "version": "2.0.12",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+          "name": "Seofeb",
+          "email": "contact@seofeb.com"
+        }
+    ],
+    "require": {
+      "php": "~8.1.0"
+    },
+    "support": {
+        "issues": "https://github.com/seofeb/magento2-FAQ/issues"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Seofeb\\Faq\\": ""
+        }
+    }
+}

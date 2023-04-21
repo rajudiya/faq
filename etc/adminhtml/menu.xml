@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * MagePrince
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the seofeb.com license that is
+ * available through the world-wide-web at this URL:
+ * https://seofeb.com/end-user-license-agreement
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    MagePrince
+ * @package     Seofeb_Base
+ * @copyright   Copyright (c) MagePrince (https://seofeb.com/)
+ * @license     https://seofeb.com/end-user-license-agreement
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Seofeb_Faq::menu"
+			 module="Seofeb_Faq"
+			 resource="Seofeb_Faq::menu"
+			 sortOrder="50"
+			 translate="title"
+			 title="FAQ"/>
+		<add id="Seofeb_Faq::faqgroup"
+			 action="seofeb_faq/faqgroup/index"
+			 module="Seofeb_Faq"
+			 parent="Seofeb_Faq::menu"
+			 resource="Seofeb_Faq::FaqGroup"
+			 sortOrder="10"
+			 translate="title"
+			 title="Manage FAQGroup"/>
+		<add id="Seofeb_Faq::faq"
+			 action="seofeb_faq/faq/index"
+			 module="Seofeb_Faq"
+			 parent="Seofeb_Faq::menu"
+			 resource="Seofeb_Faq::Faq"
+			 sortOrder="20"
+			 translate="title"
+			 title="Manage FAQ"/>
+        <add id="Seofeb_Faq::configuration"
+			 action="adminhtml/system_config/edit/section/faqtab"
+			 module="Seofeb_Faq"
+			 parent="Seofeb_Faq::menu"
+			 resource="Seofeb_Faq::Configuration"
+			 sortOrder="30"
+			 translate="title"
+			 title="Configuration"/>
+		<add id="Seofeb_Faq::menu_useful"
+			 module="Seofeb_Faq"
+			 parent="Seofeb_Faq::menu"
+			 resource="Seofeb_Faq::menu"
+			 sortOrder="40"
+			 translate="title"
+			 title="Useful Links"/>
+		<add id="Seofeb_Faq::faq_user_guid"
+			 action="seofeb_faq/faq/index"
+			 module="Seofeb_Faq"
+			 parent="Seofeb_Faq::menu_useful"
+			 resource="Seofeb_Faq::menu"
+			 sortOrder="50"
+			 target="_blank"
+			 translate="title"
+			 title="FAQ User Guid"/>
+		<add id="Seofeb_Faq::other_modules"
+			 module="Seofeb_Faq"
+             action="adminhtml/system_config/edit/section/seofeb"
+			 parent="Seofeb_Faq::menu_useful"
+			 resource="Seofeb_Faq::menu"
+			 sortOrder="60"
+			 translate="title"
+			 title="Seofeb Modules"/>
+	</menu>
+</config>
